@@ -33,8 +33,8 @@ In order to execute the solution, run the main.py script. The pythonpath must be
 
 On Macbook, run the following command in the terminal:
 
-  $ PYTHONPATH=. python3 src/main.py
--------------------------------------------------------
+$ PYTHONPATH=. python3 src/main.py
+
 On Windows, run the following command in the terminal:
 
   $ python src/main.py
@@ -43,12 +43,15 @@ On Windows, run the following command in the terminal:
 NOTE: In case the script is not running due to missing modules not found, you may need to set the PYTHONPATH to the project's directory in order for modules in the python path to be imported:
 
 Powershell example:
+
   $ $Env:PYTHONPATH= = "C:\Users\path\to\project\directory\"
   
 Shell example: 
+
   $ export PYTHONPATH="C:\Users\path\to\project\directory\"
   
 Windows example:
+
   $ setx PYTHONPATH= "C:\SyAutomation\automation-tests\ZProjects"
 
 
