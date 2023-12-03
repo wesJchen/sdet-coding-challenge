@@ -51,6 +51,7 @@ class Main:
             for check in results:
                 if "=" in check:
                     self.current_group = grouped_array[2]
+                    break
                 elif "<" in check:
                     self.current_group = grouped_array[0]
                 else:
