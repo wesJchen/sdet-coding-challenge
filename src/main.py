@@ -5,15 +5,13 @@ from selenium.webdriver.common.alert import Alert
 from selenium.common.exceptions import NoAlertPresentException
 
 from page_objects.elements import PageElements
-from page_methods.browser_methods import Webscraper
+from src.page_methods.browser_methods import Webscraper
 
 class Main:
-
     def __init__(self):
         self.current_group = None
 
     def process_solution(self):
-
         short_sleep_time = 0.3
         long_sleep_time = 3
 
@@ -74,7 +72,7 @@ class Main:
                     break
 
             except NoAlertPresentException:
-                print('No alert found.')
+                print('No alert found')
 
         time.sleep(long_sleep_time)
         entry.close_browser()
