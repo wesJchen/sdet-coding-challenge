@@ -30,8 +30,6 @@ class Webscraper:
         right_basket_element.send_keys(gold_num)
 
     def get_weigh_results(self):
-        #last_ol_element = self.driver.find_element(By.XPATH,'//*[@id="root"]/div/div[1]/div[5]/ol[last()]')
-        #yield last_ol_element.text
         result_element = self.driver.find_element(By.ID,"reset")
         yield result_element.text
 
