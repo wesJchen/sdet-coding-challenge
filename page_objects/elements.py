@@ -1,5 +1,4 @@
 class PageElements:
-
     base_url = "http://sdetchallenge.fetch.com/"
 
     # Buttons

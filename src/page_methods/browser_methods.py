@@ -6,7 +6,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from page_objects.elements import PageElements
 
 class Webscraper:
-
     def __init__(self):
         self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
