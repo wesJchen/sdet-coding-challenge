@@ -39,8 +39,10 @@ NOTE: In case the script is not running due to missing modules not found, you ma
 
 Powershell example:
   $ $Env:PYTHONPATH= = "C:\Users\path\to\project\directory\"
+  
 Shell example: 
   $ export PYTHONPATH="C:\Users\path\to\project\directory\"
+  
 Windows example:
   $ setx PYTHONPATH= "C:\SyAutomation\automation-tests\ZProjects"
 
