@@ -22,19 +22,19 @@ class Webscraper:
         reset_button.click()
 
     def left_basket(self, gold_num:str, position:int):
-        left_basket_element = self.driver.find_element(By.ID,f"left_{position}")
+        left_basket_element = self.driver.find_element(By.ID,PageElements.left_basket_id.format(position))
         left_basket_element.send_keys(gold_num)
 
     def right_basket(self, gold_num:str, position:int):
-        right_basket_element = self.driver.find_element(By.ID,f"right_{position}")
+        right_basket_element = self.driver.find_element(By.ID,PageElements.right_basket_id.format(position))
         right_basket_element.send_keys(gold_num)
 
     def get_weigh_results(self):
-        result_element = self.driver.find_element(By.ID,"reset")
+        result_element = self.driver.find_element(By.XPATH,PageElements.results_xpath)
         yield result_element.text
 
     def select_fake_bar(self, gold_num:str):
-        fake_element = self.driver.find_element(By.XPATH, f'//*[@id="coin_{gold_num}"]')
+        fake_element = self.driver.find_element(By.XPATH, PageElements.fake_bar_solution_xpath.format(gold_num))
         fake_element.click()
 
     def close_browser(self):
