@@ -15,12 +15,15 @@ This project used the pipenv to create a virtual environment in order to install
   $ pip install pipenv
 
 Next, set up the virtual environment and install dependencies by running the following shell command. This should automatically set up the dependencies found in the pipfile.lock file in a virtual environment. Shell will start up the virtual environment. On Mac, it will display (sdet-coding-challenge):
+
   $ pipenv shell
 
 NOTE: If the dependencies are not installed upon creating the virtual environment, run the following command to install dependencies listed in the Pipfile.lock first:
+
   $ pipenv sync
 
 Alternatively, a requirements.txt file is provided in the project directory. To install all the dependencies in the file with the following command (However, recommended to be run in the virtual environment instead of using pip installing dependencies directly onto the local environments):
+
   $ pip install -r requirements.txt
 
 
@@ -29,10 +32,12 @@ Alternatively, a requirements.txt file is provided in the project directory. To 
 In order to execute the solution, run the main.py script. The pythonpath must be set before the script will proceed.
 
 On Macbook, run the following command in the terminal:
+
   $ PYTHONPATH=. python3 src/main.py
 -------------------------------------------------------
 On Windows, run the following command in the terminal:
-$ python src/main.py
+
+  $ python src/main.py
 
 
 NOTE: In case the script is not running due to missing modules not found, you may need to set the PYTHONPATH to the project's directory in order for modules in the python path to be imported:
