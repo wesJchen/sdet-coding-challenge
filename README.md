@@ -39,7 +39,7 @@ NOTE: The Python Path must be set before the script will proceed. In case the sc
 
 Powershell:
 
-  $ $Env:PYTHONPATH=:"C:\Users\path\to\project\directory\"
+  $ $Env:PYTHONPATH= "C:\Users\path\to\project\directory\"
   
 Shell:
 
