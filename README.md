@@ -8,11 +8,9 @@ Coding project based on webscraping and testing
 - [execution](#execution)
 - [usage](#usage)
 
-## installation
+## installation and setup
 
-This project used the pipenv to create a virtual environment in order to install the required modules and packages for setup. Dependencies can be installed in different ways:
-
-For both Mac and windows, install pipenv in the shell (Mac + Windows):
+This project used the pipenv to create a virtual environment in order to install the required modules and packages for setup. Dependencies can be installed in different ways. For both Mac and windows, install pipenv in the shell (Mac + Windows):
 
 $ pip install pipenv
 
@@ -20,11 +18,11 @@ Next, set up the virtual environment and install dependencies by running the fol
 
 $ pipenv shell
 
-NOTE: If the dependencies are not installed upon creating the virtual environment, run the following command to install dependencies listed in the Pipfile.lock:
+NOTE: If the dependencies are not installed upon creating the virtual environment, run the following command to install dependencies listed in the Pipfile.lock first:
 
 $ pipenv sync
 
-==================================================================================================================================================
+=======================================================
 Alternatively, a requirements.txt file is provided in the project directory. To install all the dependencies in the file with the following command (However, recommended to be run in the virtual environment instead of using pip installing dependencies directly onto the local environments):
 
 $ pip install -r requirements.txt
@@ -36,9 +34,12 @@ In order to execute the solution, run the main.py script. The pythonpath must be
 
 On Macbook, run the following command in the terminal:
 $ PYTHONPATH=. python3 src/main.py
+-------------------------------------------------------
+On Windows, run the following command in the terminal:
+$ python src/main.py
 
 
-For Windows, run the following command to set the PYTHONPATH to the project's directory:
+NOTE: In case the script is not running due to missing modules not found, you may need to set the PYTHONPATH to the project's directory in order for modules in the python path to be imported:
 
 Powershell example:
 $ $Env:PYTHONPATH= = "C:\Users\path\to\project\directory\"
@@ -48,6 +49,7 @@ $ export PYTHONPATH="C:\Users\path\to\project\directory\"
 
 Windows example:
 $ setx PYTHONPATH= "C:\SyAutomation\automation-tests\ZProjects"
+
 
 
 ## usage
