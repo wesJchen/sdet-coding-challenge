@@ -25,11 +25,11 @@ class Webscraper:
         reset_button = self.driver.find_element(By.XPATH,PageElements.reset_button_xpath)
         reset_button.click()
 
-    def left_basket(self, gold_num:str, position:int):
+    def left_basket(self, gold_num:int, position:int):
         left_basket_element = self.driver.find_element(By.ID,PageElements.left_basket_id.format(position))
         left_basket_element.send_keys(gold_num)
 
-    def right_basket(self, gold_num:str, position:int):
+    def right_basket(self, gold_num:int, position:int):
         right_basket_element = self.driver.find_element(By.ID,PageElements.right_basket_id.format(position))
         right_basket_element.send_keys(gold_num)
 
@@ -37,7 +37,7 @@ class Webscraper:
         result_element = self.driver.find_element(By.XPATH,PageElements.results_xpath)
         yield result_element.text
 
-    def select_fake_bar(self, gold_num:str):
+    def select_fake_bar(self, gold_num:int):
         fake_element = self.driver.find_element(By.XPATH, PageElements.fake_bar_solution_xpath.format(gold_num))
         fake_element.click()
 
