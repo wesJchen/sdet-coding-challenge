@@ -21,10 +21,9 @@ class Main:
         except Exception as pageError:
             return f'An error occurred on URL navigation: {pageError}'
 
-        # Set up dynamic variables
-        gold_bars_page_element = entry.driver.find_element(By.XPATH,PageElements.gold_options_xpath) #Scrape the gold bar elements options
-        num_gold_bars = len(gold_bars_page_element.find_elements(By.XPATH,PageElements.gold_options_child_xpath)) #Get the number of gold bars options on page
-        self.current_group = list(range(0,num_gold_bars)) #Create the current group to test through
+        # Contain a variable of all possible gold options
+        num_gold_bars = entry.scrape_gold_elements()
+        self.current_group = list(range(0,num_gold_bars))
 
         # # Loop through the current group and split into 3
         while (len(self.current_group)) > 1:
@@ -32,11 +31,9 @@ class Main:
             grouped_array = [self.current_group[i:i+half_length] for i in range(0,len(self.current_group),half_length)]
 
             # Weigh the gold bars
-            for index, gold in enumerate(grouped_array[0]):
-                entry.left_basket(str(gold), index)
-                time.sleep(short_sleep_time)
-            for index, gold in enumerate(grouped_array[1]):
-                entry.right_basket(str(gold), index)
+            for index, (left_gold, right_gold) in enumerate(zip(grouped_array[0],grouped_array[1])):
+                entry.left_basket(str(left_gold),index)
+                entry.right_basket(str(right_gold),index)
                 time.sleep(short_sleep_time)
 
             entry.click_weigh()
@@ -54,7 +51,6 @@ class Main:
                     self.current_group = grouped_array[0]
                 else:
                     self.current_group = grouped_array[1]
-            
             entry.click_reset()
 
         # Select the correct fake bar
@@ -75,6 +71,7 @@ class Main:
                 print('No alert found')
 
         time.sleep(long_sleep_time)
+        alert.dismiss()
         entry.close_browser()
 
 if __name__ == "__main__":

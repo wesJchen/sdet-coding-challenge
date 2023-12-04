@@ -12,6 +12,11 @@ class Webscraper:
     def navigate_to_url(self, url):
         self.driver.get(url)
 
+    def scrape_gold_elements(self):
+        page_gold_elements = self.driver.find_element(By.XPATH,PageElements.gold_options_xpath)
+        gold_elements_count = len(page_gold_elements.find_elements(By.XPATH,PageElements.gold_options_child_xpath))
+        return gold_elements_count
+
     def click_weigh(self):
         weigh_button = self.driver.find_element(By.XPATH,PageElements.weigh_button_xpath)
         weigh_button.click()
