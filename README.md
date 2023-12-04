@@ -8,12 +8,13 @@ A coding project based on webscraping and testing
 - [Usage](#usage)
 
 ## Installation
-This project uses pipenv to create a virtual environment in order to install the required modules and packages for setup. Dependencies can be installed in different ways. For both Mac and windows, install pipenv in the shell (Mac + Windows):
+This project uses pipenv to create a virtual environment in order to install the required modules and packages for setup. Dependencies can be installed in different ways -- listed in the requirements.txt for >=versions required.
 
-Windows and Mac:
+For both Mac and windows, install pipenv in the shell (MacOS + Windows):
+
   $ pip install pipenv
 
-Mac:
+MacOS:
   $ brew install pipenv
 
 Next, set up the virtual environment and install dependencies by running the following shell command. These commands also helpset up the needed dependencies found in the pipfile.lock file in the virtual environment.
@@ -27,12 +28,12 @@ Alternatively, a requirements.txt file is provided in the project directory. To 
 
 
 ## Execution
-In order to execute the solution, run the src/main.py script in the CLI.
+To execute, run the src/main.py script for solution.
 
-Macbook:
+MacOS:
 $ PYTHONPATH=. python3 src/main.py
 
-On Windows:
+Windows:
 $ python src/main.py
 
 NOTE: The Python Path must be set before the script will proceed. In case the script is not running due to missing modules not found, you may need to set the PYTHONPATH to the project's directory in order for modules in the python path to be imported. Provided below are several ways to set the current python path for the cloned project directory:
