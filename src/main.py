@@ -39,9 +39,7 @@ class Main:
                 time.sleep(self.SHORT_SLEEP_TIME)
 
             entry.click_weigh()
-            WebDriverWait(entry.driver, self.LONG_SLEEP_TIME).until(
-                lambda driver: driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
-            )
+            WebDriverWait(entry.driver, self.LONG_SLEEP_TIME).until(Webscraper.weigh_results_update)
             weigh_results = entry.get_weigh_results()
 
             # Check the weighed results (Assume [0]: Group one, [1]: Group two, [2]: Group three)
@@ -58,7 +56,7 @@ class Main:
 
         # Select and validate the fake gold is found
         for selection in self.current_group:
-            entry.select_fake_bar(selection)
+            entry.click_fake_bar(selection)
             alert = Alert(entry.driver)
             alert_text = alert.text
 
