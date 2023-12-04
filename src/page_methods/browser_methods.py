@@ -35,7 +35,7 @@ class Webscraper:
 
     def get_weigh_results(self):
         result_element = self.driver.find_element(By.XPATH,PageElements.results_xpath)
-        yield result_element.text
+        return result_element.text
 
     def select_fake_bar(self, gold_num:int):
         fake_element = self.driver.find_element(By.XPATH, PageElements.fake_bar_solution_xpath.format(gold_num))

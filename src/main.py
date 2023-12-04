@@ -40,10 +40,11 @@ class Main:
                 time.sleep(self.SHORT_SLEEP_TIME)
 
             entry.click_weigh()
-            weigh_results = entry.get_weigh_results()
             WebDriverWait(entry.driver, self.LONG_SLEEP_TIME).until(
                 lambda driver: driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
             )
+            weigh_results = entry.get_weigh_results()
+
 
             # Check the weighed results (Assume [0]: Group one, [1]: Group two, [2]: Group three)
             for operator in weigh_results:
