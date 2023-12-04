@@ -12,8 +12,8 @@ class Main:
         self.current_group = None
 
     def process_solution(self):
-        short_sleep_time = 0.3
-        long_sleep_time = 3
+        SHORT_SLEEP_TIME = 0.3
+        LONG_SLEEP_TIME = 3
 
         try:
             entry = Webscraper()
@@ -34,11 +34,11 @@ class Main:
             for index, (left_gold, right_gold) in enumerate(zip(grouped_array[0],grouped_array[1])):
                 entry.left_basket(str(left_gold),index)
                 entry.right_basket(str(right_gold),index)
-                time.sleep(short_sleep_time)
+                time.sleep(SHORT_SLEEP_TIME)
 
             entry.click_weigh()
             results = entry.get_weigh_results()
-            WebDriverWait(entry.driver, long_sleep_time).until(
+            WebDriverWait(entry.driver, LONG_SLEEP_TIME).until(
                 lambda driver: driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
             )
 
@@ -71,7 +71,7 @@ class Main:
             except NoAlertPresentException:
                 print('No alert found')
 
-        time.sleep(long_sleep_time)
+        time.sleep(LONG_SLEEP_TIME)
         alert.dismiss()
         entry.close_browser()
 
