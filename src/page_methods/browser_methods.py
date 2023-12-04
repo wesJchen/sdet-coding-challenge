@@ -38,15 +38,15 @@ class Webscraper:
         fake_element.click()
 
     # Page element data
-    def scrape_gold_elements(self):
+    def scrape_gold_elements(self) -> int:
         page_gold_elements = self.driver.find_element(By.XPATH,PageElements.gold_options_xpath)
         gold_elements_count = len(page_gold_elements.find_elements(By.XPATH,PageElements.gold_options_child_xpath))
         return gold_elements_count
 
-    def get_weigh_results(self):
+    def get_weigh_results(self) -> str:
         result_element = self.driver.find_element(By.XPATH,PageElements.results_xpath)
         return result_element.text
     
     # Page element check condition
-    def weigh_results_update(driver):
+    def weigh_results_update(driver) -> bool:
         return driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
