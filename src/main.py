@@ -16,11 +16,8 @@ class Main:
         self.current_group = None
 
     def process_solution(self):
-        try:
-            entry = Webscraper()
-            entry.navigate_to_url(PageElements.base_url)
-        except Exception as pageError:
-            return f'An error occurred on URL navigation: {pageError}'
+        entry = Webscraper()
+        entry.navigate_to_url(PageElements.base_url)
 
         # Contain dynamic variable for possible gold options
         num_gold_bars = entry.scrape_gold_elements()
