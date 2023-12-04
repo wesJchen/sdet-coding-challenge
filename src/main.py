@@ -17,7 +17,6 @@ class Main:
         self.current_group = None
 
     def process_solution(self):
-
         try:
             entry = Webscraper()
             entry.navigate_to_url(PageElements.base_url)
@@ -44,7 +43,6 @@ class Main:
                 lambda driver: driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
             )
             weigh_results = entry.get_weigh_results()
-
 
             # Check the weighed results (Assume [0]: Group one, [1]: Group two, [2]: Group three)
             for operator in weigh_results:
