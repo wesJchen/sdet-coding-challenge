@@ -20,6 +20,7 @@ MacOS:
 Next, set up the virtual environment and install dependencies by running the following shell command. These commands also helpset up the needed dependencies found in the pipfile.lock file in the virtual environment.
 
   $ pipenv shell
+  
   $ pipenv sync
 
 Alternatively, a requirements.txt file is provided in the project directory. To install all the dependencies in the file with the following command (However, the recommended flow is to install the dependencies all through the virtual environment instead of using pip installing dependencies directly onto the local environments):
