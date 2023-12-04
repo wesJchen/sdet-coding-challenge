@@ -12,7 +12,6 @@ class Main:
     SHORT_SLEEP_TIME = 0.3
     LONG_SLEEP_TIME = 3
     SOLUTION_COUNT = 1
-    GROUP_ONE, GROUP_TWO, GROUP_THREE = 0, 1, 2
 
     def __init__(self):
         self.current_group = None
@@ -29,12 +28,12 @@ class Main:
         num_gold_bars = entry.scrape_gold_elements()
         self.current_group = list(range(0,num_gold_bars))
 
-        # # Loop through the current group and split into 3
+        # Loop through current group (total gold options to check) after splitting into three subgroups
         while (len(self.current_group)) > self.SOLUTION_COUNT:
             half_length = len(self.current_group) // 2
             grouped_array = [self.current_group[i:i+half_length] for i in range(0,len(self.current_group),half_length)]
 
-            # Weigh the gold
+            # Weigh the first and second subgroups
             for index, (left_gold, right_gold) in enumerate(zip(grouped_array[0],grouped_array[1])):
                 entry.left_basket(left_gold, index)
                 entry.right_basket(right_gold, index)
@@ -46,16 +45,16 @@ class Main:
                 lambda driver: driver.find_element(By.XPATH, PageElements.results_xpath).text != PageElements.results_reset_text
             )
 
-            # Check the weighed results
+            # Check the weighed results (Assume [0]: Group one, [1]: Group two, [2]: Group three)
             for operator in weigh_results:
                 if "=" in operator:
-                    self.current_group = grouped_array[self.GROUP_THREE]
+                    self.current_group = grouped_array[2]
                     break
                 elif "<" in operator:
-                    self.current_group = grouped_array[self.GROUP_ONE]
+                    self.current_group = grouped_array[0]
                     break
                 else:
-                    self.current_group = grouped_array[self.GROUP_TWO]
+                    self.current_group = grouped_array[1]
             entry.click_reset()
 
         # Select and validate the fake gold is found
