@@ -8,7 +8,7 @@ A coding project based on webscraping and testing on http://sdetchallenge.fetch.
 - [Usage](#usage)
 
 ## Installation
-This project uses pipenv to create a virtual environment in order to install the required modules and packages for setup. Program requires Google Chrome, Selenium and Chromedriver packages (installed through the virtual environment. Dependencies can be installed the following ways: See in the requirements.txt for >=versions required.
+This project uses pipenv to create a virtual environment in order to install the required modules and packages for setup. Prerequisites to running this program requires Google Chrome browser, Selenium and Chromedriver packages (which will be installed through pipenv). Dependencies can also be installed the following ways - see the requirements.txt for >=versions required per package.
 
 For both Mac and windows, install pipenv in the shell (MacOS + Windows):
 
