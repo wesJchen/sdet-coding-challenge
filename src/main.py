@@ -49,6 +49,7 @@ class Main:
                     break
                 elif "<" in check:
                     self.current_group = grouped_array[0]
+                    break
                 else:
                     self.current_group = grouped_array[1]
             entry.click_reset()
