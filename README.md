@@ -18,7 +18,7 @@ In order for the solution script to find the fake gold, the following must be in
 
 ## Setup
 
-To get started with this project, make sure you have `pipenv` installed to set up the virtual environment and install the necessary dependencies. If you don't have `pipenv` yet, follow the appropriate installation instructions:
+To get started with this project, make sure you have `pipenv` installed. This will allow the program to set up a virtual environment and install any needed dependencies. If you don't have `pipenv` yet, please follow the appropriate installation instructions depending on your operating system in the terminal:
 
 ```
 ## Windows:
@@ -28,7 +28,7 @@ To get started with this project, make sure you have `pipenv` installed to set u
   $ brew install pipenv
 ```
 
-Clone the repository and cd into the project's saved directory path. Set up the virtual environment and install dependencies by running the following shell commands (recommended):
+Clone the project repository and cd into the saved directory path. Then, set up the virtual environment and install dependencies by running the following shell commands (recommended):
 
 ```
   $ pipenv shell 
@@ -57,7 +57,7 @@ Wait for the program to run: the Google Chrome browser will open through Seleniu
 ```
 
 ## Troubleshooting:
-In the event script is missing modules, set the PYTHONPATH to the project's directory. Provided below set the python path to the cloned project directory:
+In the event script is missing modules, set the `PYTHONPATH` to the project's directory. Provided below set the python path to the cloned project directory:
 
 ```
 ## Powershell: 
@@ -72,4 +72,4 @@ In the event script is missing modules, set the PYTHONPATH to the project's dire
 
 ## Usage
 This project is for the demonstration and application of python and selenium program to interface with a webpage.
-See the Pipfile for cumulative list of dependencies primarily needed for the scripts to run.
+See the Pipfile or requirements.txt for cumulative list of dependencies primarily needed for the scripts to run.
