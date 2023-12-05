@@ -44,16 +44,16 @@ Now, you are ready to execute the script and process the solution. Run the follo
 
 ```
 ## Windows:
-  `$ python src/main.py`
+  $ python src/main.py
 
 ## MacOS:
-  `$ PYTHONPATH=. python3 src/main.py`
+  $ PYTHONPATH=. python3 src/main.py
 ```
 
 Wait for the program to run: the Google Chrome browser will open through Selenium Webdriver, then print the solution in the command line when complete. When finished with the program, simply type the following shell command in project directory to close the virtual environment as needed:
 
 ```
-  `$ exit`
+  $ exit
 ```
 
 ## Troubleshooting:
