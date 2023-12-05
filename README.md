@@ -18,7 +18,7 @@ In order for the solution script to find the fake gold, the following must be in
 
 ## Setup
 
-This project will also require having pipenv to set up the virtual environment and install dependencies. Install pipenv (if already have, skip this step):
+This project will also require having `pipenv` to set up the virtual environment and install dependencies. Install `pipenv` (if already have, skip this step):
 ```
 ## Windows:
   $ pip install pipenv
