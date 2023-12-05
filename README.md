@@ -1,6 +1,8 @@
 # SDET-Coding-Challenge
 A coding project based on webscraping and testing on http://sdetchallenge.fetch.com/
 
+Objective: Using a balance scale and a set of gold coins, identify the counterfeit gold coin among them. All genuine coins have identical weight, while the fraudulent one is lighter than the authentic ones.
+
 ## Table of contents
 - [Prerequisites](#Prerequisites)
 - [Setup](#Setup)
@@ -9,7 +11,7 @@ A coding project based on webscraping and testing on http://sdetchallenge.fetch.
 
 ## Prerequisites
 
-In order for the solution script to be run, the following must be installed onto your machine:
+In order for the solution script to find the fake gold, the following must be installed onto your machine:
 
 * Google chrome browser
 * Python
