@@ -4,16 +4,19 @@ A coding project based on webscraping and testing on http://sdetchallenge.fetch.
 ## Table of contents
 - [Prerequisites](#Prerequisites)
 - [Setup](#Setup)
+- [Troubleshooting](#Troubleshooting)
 - [Usage](#Usage)
 
 ## Prerequisites
+
+In order for the solution script to be run, the following must be installed onto your machine:
 
 * Google chrome browser
 * Python
 
 ## Setup
 
-This project will also require having pipenv to set up a virtual environment and install dependencies. Install pipenv (if have, skip the following commands):
+This project will also require having pipenv to set up the virtual environment and install dependencies. Install pipenv (if already have, skip this step):
 ```
 ## Windows:
   $ pip install pipenv
@@ -22,8 +25,7 @@ This project will also require having pipenv to set up a virtual environment and
   $ brew install pipenv
 ```
 
-Clone the repository and cd into the project's saved directory path. 
-Set up the virtual environment and install dependencies by running the following shell commands (recommended):
+Clone the repository and cd into the project's saved directory path. Set up the virtual environment and install dependencies by running the following shell commands (recommended):
 
 ```
   $ pipenv shell 
@@ -35,7 +37,7 @@ Alternatively, a requirements.txt file is provided in the project directory for 
   $ pip3 install -r requirements.txt
 ```
 
-Run the following commands 
+Now, run the following commands in the command line to execute script and process the solution: 
 
 ```
 ## Windows:
@@ -43,12 +45,16 @@ Run the following commands
 
 ## MacOS:
   `$ PYTHONPATH=. python3 src/main.py`
-
 ```
 
-Wait for the program to run. The Google Chrome browser will open through Selenium Webdriver, then print the solution in the command line when complete.
+Wait for the program to run. The Google Chrome browser will open through Selenium Webdriver, then print the solution in the command line when complete. When finished with the program, simply type the following shell command in project directory to close the virtual environment:
 
-Troubleshooting: In the event script is missing modules, set the PYTHONPATH to the project's directory. Provided below set the python path to the cloned project directory:
+```
+  `$ exit`
+```
+
+## Troubleshooting:
+In the event script is missing modules, set the PYTHONPATH to the project's directory. Provided below set the python path to the cloned project directory:
 
 ```
 ## Powershell: 
@@ -59,12 +65,6 @@ Troubleshooting: In the event script is missing modules, set the PYTHONPATH to t
 
 ## Windows:
   $ setx PYTHONPATH= "C:\Users\path\to\project\directory\"
-```
-
-When finished, simply type the following shell command in project directory to close the virtual environment:
-
-```
-  `$ exit`
 ```
 
 ## Usage
