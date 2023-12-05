@@ -18,7 +18,8 @@ In order for the solution script to find the fake gold, the following must be in
 
 ## Setup
 
-This project will also require having `pipenv` to set up the virtual environment and install dependencies. Install `pipenv` (if already have, skip this step):
+To get started with this project, make sure you have `pipenv` installed to set up the virtual environment and install the necessary dependencies. If you don't have `pipenv` yet, follow the appropriate installation instructions:
+
 ```
 ## Windows:
   $ pip install pipenv
@@ -34,12 +35,12 @@ Clone the repository and cd into the project's saved directory path. Set up the 
   $ pipenv sync
 ```
 
-Alternatively, a requirements.txt file is provided in the project directory for installing needed dependencies:
+Alternatively, if you do not prefer to use a virtual environment, a `requirements.txt` file is provided in the project directory for installing required dependencies:
 ```
   $ pip3 install -r requirements.txt
 ```
 
-Now, run the following commands in the command line to execute script and process the solution: 
+Now, you are ready to execute the script and process the solution. Run the following commands based on your operating system: 
 
 ```
 ## Windows:
@@ -49,7 +50,7 @@ Now, run the following commands in the command line to execute script and proces
   `$ PYTHONPATH=. python3 src/main.py`
 ```
 
-Wait for the program to run. The Google Chrome browser will open through Selenium Webdriver, then print the solution in the command line when complete. When finished with the program, simply type the following shell command in project directory to close the virtual environment:
+Wait for the program to run: the Google Chrome browser will open through Selenium Webdriver, then print the solution in the command line when complete. When finished with the program, simply type the following shell command in project directory to close the virtual environment as needed:
 
 ```
   `$ exit`
